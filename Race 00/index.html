@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <meta name="description" content="Calculator">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <img src="assets/images/img.gif">
+    <a href="../index.html" class="back">
+        <div class="back_d">
+            &#129152 Back</div>
+    </a>
+    <div class="workspace" id="w">
+        <h1 class="header">Calculator</h1>
+        <div class="interaction">
+            <div id="in-out">
+                <button id="clear_history">C</button>
+                <div class="history">
+                    <label class="operation"></label>
+                    <label class="operation"></label>
+                    <label class="operation"></label>
+                    <label class="operation"></label>
+                    <label class="operation"></label>
+                    <label class="operation"></label>
+                    <label class="operation"></label>
+                    <label class="operation"></label>
+                    <label class="operation"></label>
+                    <label class="operation"></label>
+                </div>
+                <div class="input_line">
+                    <label id="size_check">??/30</label>
+                    <label id="input">(5-3)!+√(9-0)+15!-(11+3)!+10</label>
+                </div>
+                <!-- <input type="text" id="input"> -->
+            </div>
+        </div>
+        <div class="convert" active="no">
+            <div id="in-out">
+                <label for="kilo">Kilogram</label>
+                <input type="number" id="kilo" class="conv_inp" oninput="kilo_oninput()" onchange="kilo_onchange()">
+                <label for="gram">Grams</label>
+                <input type="number" id="gram" class="conv_inp" oninput="gram_oninput()" onchange="gram_onchange()">
+                <label for="tonn">Tons</label>
+                <input type="number" id="tonn" class="conv_inp" oninput="tonn_oninput()" onchange="tonn_onchange()">
+                <label for="pount">Pounts</label>
+                <input type="number" id="pound" class="conv_inp" oninput="pount_oninput()" onchange="pount_onchange()">
+            </div>
+        </div>
+        <div class="convert" active="no">
+            <div id="in-out">
+                <label for="cel">Celsius</label>
+                <input type="number" id="cel" class="conv_inp" oninput="cel_oninput()" onchange="cel_onchange()">
+                <label for="fahr">Fahrenheit</label>
+                <input type="number" id="fahr" class="conv_inp" oninput="fahr_oninput()" onchange="fahr_onchange()">
+                <label for="kel">Kelvin</label>
+                <input type="number" id="kel" class="conv_inp" oninput="kel_oninput()" onchange="kel_onchange()">
+            </div>
+        </div>
+        <div class="convert" active="no">
+            <div id="in-out">
+                <label for="metr">Metres</label>
+                <input type="number" id="metr" class="conv_inp" oninput="metr_oninput()" onchange="metr_onchange()">
+                <label for="kilo_m">Kilometre</label>
+                <input type="number" id="kilo_m" class="conv_inp" oninput="kilo_m_oninput()"
+                    onchange="kilo_m_onchange()">
+                <label for="cent">Centimetre</label>
+                <input type="number" id="cent" class="conv_inp" oninput="cent_oninput()" onchange="cent_onchange()">
+                <label for="feet">Feets</label>
+                <input type="number" id="feet" class="conv_inp" oninput="feet_oninput()" onchange="feet_onchange()">
+            </div>
+        </div>
+        <div class="convert" active="no" id="area_inter">
+            <div id="in-out">
+                <label for="area_m">m^2</label>
+                <input type="number" id="area_m" class="conv_inp" oninput="area_m_oninput()"
+                    onchange="area_m_onchange()">
+                <label for="area_k">Km^2</label>
+                <input type="number" id="area_k" class="conv_inp" oninput="area_k_oninput()"
+                    onchange="area_k_onchange()">
+                <label for="area_c">cm^2</label>
+                <input type="number" id="area_c" class="conv_inp" oninput="area_c_oninput()"
+                    onchange="area_c_onchange()">
+                <label for="area_f">feet^2</label>
+                <input type="number" id="area_f" class="conv_inp" oninput="area_f_oninput()"
+                    onchange="area_f_onchange()">
+            </div>
+        </div>
+
+
+
+        <div class="button-line">
+            <button id="C">C</button>
+            <button id="sign_b">+/-</button>
+            <button id="per">%</button>
+            <button class="write" id="fuct">x!</button>
+            <button class="write" id="power">x<sup>n</sup></button>
+        </div>
+        <div class="button-line">
+            <button id="CE">CE</button>
+            <button class="write" id="left_b">(</button>
+            <button class="write" id="right_b">)</button>
+            <button id="exp">e<sup>x</sup></button>
+            <button class="write" id="root">√x</button>
+        </div>
+        <div class="button-line">
+            <button class="write" id="plus">+</button>
+            <button class="write" id="minus">-</button>
+            <button class="write" id="mult">*</button>
+            <button class="write" id="div">/</button>
+            <button id="system" system="dec">dec</button>
+        </div>
+        <div class="button-line">
+            <button class="write" id="n7">7</button>
+            <button class="write" id="n8">8</button>
+            <button class="write" id="n9">9</button>
+            <button id="mr">MR</button>
+            <button id="mc">MC</button>
+        </div>
+        <div class="button-line">
+            <button class="write" id="n4">4</button>
+            <button class="write" id="n5">5</button>
+            <button class="write" id="n6">6</button>
+            <button id="mp">M+</button>
+            <button id="mm">M-</button>
+        </div>
+        <div class="button-line">
+            <button class="write" id="n1">1</button>
+            <button class="write" id="n2">2</button>
+            <button class="write" id="n3">3</button>
+            <button id="weight">kg</button>
+            <button id="temperature">t°</button>
+        </div>
+        <div class="button-line">
+            <button class="write" id="n0">0</button>
+            <button class="write" id="point">.</button>
+            <button id="equal">=</button>
+            <button id="length">m</button>
+            <button id="area">m<sup>2</sup></button>
+        </div>
+        <div class="button-line">
+            <button class="write" id="Bb" disabled>B</button>
+            <button class="write" id="Cb" disabled>C</button>
+            <button class="write" id="Db" disabled>D</button>
+            <button class="write" id="Eb" disabled>E</button>
+            <button class="write" id="Fb" disabled>F</button>
+        </div>
+    </div>
+</body>
+
+
+</html>
