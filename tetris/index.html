@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tetris</title>
+    <meta name="description" content="Tetris">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <a href="../index.html" class="back">
+        <div class="back_d">
+            &#129152 Back</div>
+    </a>
+    <div class="game" style="display: flex; flex-direction: row; justify-content: center; gap: 20px;">
+        <div class="canvas-area">
+            <canvas id="game_board" width="250" height="500"></canvas>
+        </div>
+        <div class="info-area" style="display: flex; flex-direction: column; justify-content: top;">
+            <div class="score-area">
+                <h2>Score: <span id="score">0</span></h2>
+            </div>
+            <div class="next-block-area">
+                <h2>Next Block:</h2>
+                <canvas id="next_block"></canvas>
+            </div>
+            <div class="button-area">
+                <button id="start_button">Start Game</button>
+                <button id="pause_button">Pause Game</button>
+            </div>
+        </div>
+    </div>
+</body>
